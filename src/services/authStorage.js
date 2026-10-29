@@ -3,6 +3,14 @@ import api from '../api/axiosConfig';
 const CURRENT_USER_KEY = "bakery_current_user";
 const CONFECTIONER_PROFILE_KEY = "bakery_confectioner_profiles";
 
+function authErrorMessage(error, fallback) {
+  const data = error.response?.data;
+  if (typeof data === "string" && data.trim()) return data;
+  if (typeof data?.message === "string") return data.message;
+  if (typeof data?.title === "string") return data.title;
+  return fallback;
+}
+
 function readProfiles() {
   const raw = localStorage.getItem(CONFECTIONER_PROFILE_KEY);
   if (!raw) return [];
@@ -103,7 +111,7 @@ export async function registerUser({ fullName, email, password, role, telegram =
     }
     return loginResult;
   } catch (error) {
-    const message = error.response?.data || 'Registration failed';
+    const message = authErrorMessage(error, 'Не вдалося зареєструватися. Спробуйте пізніше.');
     return { ok: false, message };
   }
 }
@@ -133,7 +141,7 @@ export async function loginUser({ email, password }) {
 
     return { ok: true, user };
   } catch (error) {
-    const message = error.response?.data || 'Invalid email or password!';
+    const message = authErrorMessage(error, 'Не вдалося увійти. Перевірте дані або спробуйте пізніше.');
     return { ok: false, message };
   }
 }
