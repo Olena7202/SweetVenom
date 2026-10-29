@@ -51,7 +51,7 @@ function CakeDetailMedia({ product }) {
 
   return (
     <div className="product-dialog-media">
-      <div className="dessert-view-stage" data-view={showCut ? "cut" : "whole"} role="img" aria-label={`${product.name}${hasPair ? (showCut ? " — розріз" : " — цілий торт") : ""}`}>
+      <div className="dessert-view-stage" data-view={showCut ? "cut" : "whole"} role="img" aria-label={`${product.name}${hasPair ? (showCut ? " - розріз" : " - цілий торт") : ""}`}>
         <img key={primary} src={primary} alt="" aria-hidden="true" className="modal-image dessert-view-whole" onLoad={markLoaded} onError={(event) => {
           setFailed(true);
           const fallback = detailPhoto(source);

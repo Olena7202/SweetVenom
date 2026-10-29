@@ -90,6 +90,20 @@ export function getDashboardPathByRole(role) {
   return role === "confectioner" ? "/confectioner" : "/client";
 }
 
+export async function loginDemoUser(role) {
+  if (import.meta.env.MODE !== "demo") return { ok: false, message: "Демо-вхід доступний лише в демонстраційній версії." };
+  try {
+    const response = await api.post('/auth/demo', { role });
+    const data = response.data;
+    const user = { id: data.userId, fullName: data.name, email: data.email, phone: data.phone, role: data.role.toLowerCase(), isDemo: true };
+    localStorage.setItem('token', data.token);
+    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
+    return { ok: true, user };
+  } catch (error) {
+    return { ok: false, message: authErrorMessage(error, "Не вдалося відкрити демо-кабінет. Перевірте, чи дозволене збереження даних у браузері.") };
+  }
+}
+
 export async function registerUser({ fullName, email, password, role, telegram = "" }) {
   try {
     await api.post('/auth/register', {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/NavBar/NavBar";
 import SiteFooter from "../../components/SiteFooter/SiteFooter";
-import { getDashboardPathByRole, loginUser, registerUser } from "../../services/authStorage";
+import { getDashboardPathByRole, loginDemoUser, loginUser, registerUser } from "../../services/authStorage";
 
 export default function Auth() {
   const navigate = useNavigate();
@@ -13,6 +13,17 @@ export default function Auth() {
   const [password, setPassword] = useState("");
   const [telegram, setTelegram] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [demoLoading, setDemoLoading] = useState(false);
+  const isDemo = import.meta.env.MODE === "demo";
+
+  async function openDemo(role) {
+    setDemoLoading(true);
+    setErrorMessage("");
+    const result = await loginDemoUser(role);
+    setDemoLoading(false);
+    if (!result.ok) { setErrorMessage(result.message); return; }
+    navigate(getDashboardPathByRole(result.user.role), { replace: true });
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -64,6 +75,17 @@ export default function Auth() {
           </section>
 
           <section className="auth-card">
+            {isDemo ? <>
+              <div className="form-header">
+                <h2>Демонстраційні кабінети</h2>
+                <p>Оберіть роль для перегляду. Реєстрація та пароль не потрібні. Дані тестові, а зміни зберігаються лише в цьому браузері.</p>
+              </div>
+              <div className="auth-form">
+                <button type="button" className="form-submit" disabled={demoLoading} onClick={() => openDemo("client")}>Відкрити кабінет клієнта</button>
+                <button type="button" className="form-submit" disabled={demoLoading} onClick={() => openDemo("confectioner")}>Відкрити кабінет кондитера</button>
+                {errorMessage && <p className="form-error" role="alert">{errorMessage}</p>}
+              </div>
+            </> : <>
             <div className="form-header">
               <h2>{isLogin ? "Вхід до кабінету" : "Створення кабінету"}</h2>
               <p>
@@ -157,6 +179,7 @@ export default function Auth() {
                 {isLogin ? " Зареєструватися" : " Увійти"}
               </button>
             </p>
+            </>}
           </section>
         </div>
       </div>

@@ -104,7 +104,7 @@ export default function Home() {
 
           <section className="occasion-section torn-section" data-reveal><div className="occasion-photo"><img src="/images/wedding-flower-cake.jpg" alt="Торт із квітами" loading="lazy" /></div><div className="occasion-copy"><h2>Оберіть склад<br />і оформлення.</h2><p>Вкажіть торт, вагу, кількість і бажану дату. Напис на торті та побажання до декору залиште в коментарі.</p><Link className="paper-button paper-button-cream" to="/order">Оформити замовлення <ArrowIcon /></Link></div></section>
 
-          <section className="paper-faq paper-section" aria-labelledby="faq-title" data-reveal><h2 id="faq-title">Питання — відповіді</h2><div className="faq-list">{questions.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></section>
+          <section className="paper-faq paper-section" aria-labelledby="faq-title" data-reveal><h2 id="faq-title">Питання - відповіді</h2><div className="faq-list">{questions.map(([q, a]) => <details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></section>
         </main>
         <SiteFooter />
       </div>
