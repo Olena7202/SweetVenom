@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   min-height: 100vh;
   color: var(--ink);
   background:

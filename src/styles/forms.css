@@ -156,6 +156,30 @@
   gap: 14px;
 }
 
+.order-page .forms-layout > *,
+.order-form,
+.order-form .form-row,
+.order-form .field-group {
+  min-width: 0;
+}
+
+.order-form input[type="date"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.order-form input[type="date"]::-webkit-date-and-time-value {
+  min-width: 0;
+  text-align: left;
+}
+
 .field-group {
   display: grid;
   gap: 8px;
@@ -2076,7 +2100,7 @@ form button,
 
 @media (max-width: 960px) {
   .forms-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .confectioner-studio-layout {
