@@ -1,0 +1,28 @@
+/* Align the catalog heading, controls and cards to one shared column. */
+.sv-home .paper-catalog::before { display:none; }
+.sv-home .paper-catalog .paper-section-head { max-width:1160px; margin:0 auto 24px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+.sv-home .paper-catalog .paper-section-head>div:first-child { min-width:0; }
+.sv-home .paper-catalog .paper-section-head h2 { margin:0; font-size:clamp(34px,3vw,48px); line-height:1.15; letter-spacing:-1.5px; }
+.sv-home #catalog-title em { color:inherit; }
+.sv-home .paper-catalog .paper-section-head .sv-search-row { flex:none; margin:0; width:auto; }
+.sv-home .paper-catalog .sv-sort { display:flex; align-items:center; gap:12px; padding:8px 12px 8px 16px; max-width:none; border:1px solid #b58d7d70; border-radius:12px; box-shadow:none; background:#fff8ecb0; }
+.sv-home .paper-catalog .catalog-sort-label { font-size:14px; font-weight:400; }
+.sv-home .paper-catalog .sv-sort select { width:auto; max-width:none; padding:7px 4px; font-size:15px; font-weight:500; border:0; background:transparent; color:#493329; cursor:pointer; }
+.sv-home .paper-catalog-tools { display:block; max-width:1160px; padding:0 0 22px; margin:0 auto 25px; border-bottom:1px solid #b28d7733; }
+.sv-home .paper-catalog .sv-filters { display:flex; flex-wrap:wrap; align-items:center; gap:9px; width:100%; }
+.sv-home .paper-catalog .sv-filters button { flex:1 1 auto; min-height:44px; padding:10px 14px; font-size:14px; line-height:1.4; white-space:nowrap; background:#fff8ec60; border-color:#b28d7740; }
+.sv-home .paper-catalog .sv-filters button:hover { background:#ead6c8; }
+.sv-home .paper-catalog .sv-filters button.is-active { background:#91615b; color:#fff6e8; border-color:#91615b; }
+@media(max-width:1050px) {
+ .sv-home .paper-catalog .paper-section-head { align-items:flex-start; }
+ .sv-home .paper-catalog .paper-section-head h2 { max-width:19ch; }
+}
+@media(max-width:700px) {
+ .sv-home .paper-catalog .paper-section-head { flex-direction:column; gap:18px; margin-bottom:18px; }
+ .sv-home .paper-catalog .paper-section-head h2 { font-size:35px; }
+ .sv-home .paper-catalog .paper-section-head .sv-search-row { width:100%; }
+ .sv-home .paper-catalog .sv-sort { width:100%; justify-content:space-between; padding:9px 14px; }
+ .sv-home .paper-catalog .sv-filters { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
+ .sv-home .paper-catalog .sv-filters button { padding:9px 5px; min-height:44px; font-size:13px; white-space:normal; }
+ .sv-home .paper-catalog-tools { padding-bottom:19px; margin-bottom:22px; }
+}

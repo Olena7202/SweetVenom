@@ -1,0 +1,181 @@
+.navbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 36px 8px;
+}
+
+.logo {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  letter-spacing: 0.02em;
+  color: #fffdfa;
+  text-decoration: none;
+  text-shadow: 0 8px 24px rgba(101, 54, 47, 0.12);
+}
+
+.logo:focus,
+.logo:focus-visible {
+  outline: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 250, 246, 0.22);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link,
+.order-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: rgba(255, 250, 247, 0.92);
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.account-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 34px rgba(112, 68, 60, 0.12);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  color: inherit;
+}
+
+.account-btn:focus {
+  outline: none;
+}
+
+.account-btn:focus-visible {
+  outline: 2px solid rgba(255, 252, 249, 0.95);
+  outline-offset: 3px;
+}
+
+.account-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--rose-deep);
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.account-logout-btn {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+  color: #fff8f4;
+  background: var(--rose-deep);
+  box-shadow: 0 12px 34px rgba(112, 68, 60, 0.12);
+}
+
+.nav-link:hover,
+.order-btn:hover,
+.account-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.account-logout-btn:hover {
+  background: #a96d66;
+  transform: translateY(-1px);
+}
+
+.account-menu-wrap {
+  position: relative;
+}
+
+.account-menu-trigger {
+  padding: 0;
+}
+
+.account-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 200px;
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255, 251, 248, 0.98);
+  border: 1px solid rgba(222, 185, 176, 0.55);
+  box-shadow: 0 18px 40px rgba(112, 68, 60, 0.18);
+  z-index: 40;
+}
+
+.account-dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.account-dropdown-item:hover {
+  background: rgba(233, 198, 190, 0.35);
+}
+
+.nav-link-active {
+  color: var(--ink);
+  background: rgba(255, 252, 249, 0.85);
+  box-shadow: 0 10px 20px rgba(112, 68, 60, 0.08);
+}
+
+.order-btn {
+  color: var(--rose-deep);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 34px rgba(112, 68, 60, 0.12);
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px 20px 0;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .nav-link,
+  .order-btn,
+  .account-logout-btn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+}

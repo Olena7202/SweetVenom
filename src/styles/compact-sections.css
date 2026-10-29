@@ -1,0 +1,16 @@
+/* More compact cards, with room for each dessert to breathe. */
+.sv-home .products-grid { max-width:1160px; margin-inline:auto; gap:24px; }
+.sv-home .product-card.reference-card { padding:22px 18px 18px; border-radius:25px; }
+.sv-home .reference-card .reference-card-title { font-size:27px; min-height:58px; margin-bottom:8px; }
+.sv-home .reference-card .product-image-wrap { aspect-ratio:1/.74; }
+.sv-home .reference-card .product-image-wrap img { max-height:250px; }
+.sv-home .reference-card-bottom { margin-top:10px; padding-top:15px; gap:12px; }
+.sv-home .reference-card .reference-card-pricing .product-price { font-size:29px; }
+.sv-home .reference-card-cta { min-height:44px; padding:10px 14px; }
+@media(max-width:540px) {
+  .sv-home .products-grid { max-width:360px; gap:20px; }
+  .sv-home .product-card.reference-card { padding:21px 18px 18px; }
+  .sv-home .reference-card .reference-card-title { font-size:28px; min-height:58px; }
+  .sv-home .reference-card .product-image-wrap { aspect-ratio:1/.72; }
+  .sv-home .reference-card .product-image-wrap img { max-height:235px; }
+}

@@ -1,0 +1,25 @@
+.bakery-hero-copy .paper-button { background:#f7eddd; border-color:#f7eddd; color:#78514c; box-shadow:0 6px 18px #62433d12; }
+.bakery-hero-copy .paper-button:hover { background:#fff8ed; border-color:#fff8ed; color:#68443f; box-shadow:0 9px 24px #62433d20; }
+.bakery-hero-copy .paper-button:focus-visible { outline:2px solid #fff8ed; outline-offset:5px; }
+.bakery-hero-copy .paper-button>.direction-icon { background:#a67d7710; border-color:#a67d7740; }
+.bakery-hero-copy .paper-button:hover>.direction-icon { background:#a67d7720; }
+.bakery-hero .hero-cake-carousel { min-width:0; display:flex; flex-direction:column; justify-content:center; }
+.hero-cake-stage { position:relative; flex:1; min-height:370px; touch-action:pan-y; }
+.hero-cake-slide { position:absolute; inset:0; display:grid; place-items:center; opacity:0; visibility:hidden; transform:translateX(28px) rotate(3deg) scale(.94); transition:opacity .55s ease,transform .7s cubic-bezier(.2,.7,.2,1),visibility .55s; pointer-events:none; }
+.hero-cake-slide.is-current { opacity:1; visibility:visible; transform:translateX(0) rotate(0) scale(1); }
+.hero-cake-slide img { display:block; width:110%; max-width:640px; height:100%; max-height:490px; object-fit:contain; transform:translate(var(--mouse-x,0px),var(--mouse-y,0px)); transition:transform .7s ease; filter:drop-shadow(0 24px 24px #50312538); user-select:none; }
+.hero-cake-carousel .hero-drawn-orbit { inset:3% 0 21%; pointer-events:none; }
+.hero-cake-bottom { position:relative; z-index:3; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px 18px; align-items:center; padding:18px 4px 0; min-height:110px; }
+.hero-cake-caption>span { display:block; font-size:14px; line-height:1.5; color:#fff3e6d6; }
+.bakery-hero .hero-cake-caption h2 { color:var(--cream); font-family:Georgia,"Times New Roman",serif; font-size:clamp(23px,2.2vw,34px); font-weight:400; line-height:1.2; letter-spacing:-.5px; margin:6px 0 0; }
+.hero-cake-position { display:flex; align-items:center; gap:7px; padding:8px 0; }
+.hero-cake-position span { width:6px; height:6px; border-radius:8px; background:#fff3df66; transition:width .5s,background .5s; }
+.hero-cake-position span.is-current { width:24px; background:#fff3df; }
+.hero-cake-link-slot { grid-column:1/-1; min-height:26px; }
+.hero-custom-link:focus-visible { outline:2px solid #fff3df; outline-offset:4px; }
+.hero-custom-link { grid-column:1/-1; display:inline-flex; align-items:center; gap:10px; width:fit-content; color:#fff3df; font-size:15px; text-decoration:underline; text-underline-offset:5px; }
+@media(min-width:1500px) { .hero-cake-stage { min-height:450px; } .hero-cake-slide img { max-height:570px; max-width:720px; } }
+@media(max-width:1000px) and (min-width:721px) { .hero-cake-bottom { grid-template-columns:1fr; } .hero-cake-stage { min-height:320px; } .hero-cake-controls { justify-self:start; } }
+@media(max-width:720px) { .bakery-hero .hero-cake-carousel { margin-top:24px; min-height:0; } .hero-cake-stage { flex:auto; min-height:0; height:320px; } .hero-cake-slide img { width:100%; max-height:320px; } .hero-cake-bottom { padding-top:12px; gap:14px; min-height:110px; } .hero-cake-caption>span { font-size:12px; } .bakery-hero .hero-cake-caption h2 { font-size:25px; } .hero-cake-controls { gap:3px; } .hero-cake-arrow { width:36px; height:36px; } .hero-cake-dots button { width:15px; } }
+@media(max-width:380px) { .hero-cake-bottom { grid-template-columns:1fr; } .hero-cake-controls { justify-self:start; } .hero-cake-stage { height:270px; } }
+@media(prefers-reduced-motion:reduce) { .hero-cake-slide,.hero-cake-slide img { transition:none; transform:none; } }

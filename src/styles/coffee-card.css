@@ -1,0 +1,36 @@
+/* A compact coffee interlude between the catalog and celebration section. */
+.coffee-pause.coffee-card {
+  width:min(1080px,88%);
+  margin:24px auto 70px;
+  padding:28px 48px;
+  min-height:0;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1fr);
+  gap:52px;
+  border:1px solid #dfcbb9;
+  border-radius:28px;
+  background:linear-gradient(115deg,#eddfcf 0%,#f2e5da 48%,#f6eade 100%);
+  box-shadow:0 8px 30px #78523a06;
+}
+.coffee-card .coffee-visual { min-height:0; height:250px; display:flex; align-items:center; justify-content:center; }
+.coffee-card .coffee-blob { inset:20px 17% 10px; background:#dbc3aa70; border-radius:50%; transform:rotate(-12deg); }
+.coffee-card .coffee-visual img { position:relative; width:100%; max-width:350px; max-height:270px; height:auto; left:auto; top:auto; transform:rotate(-4deg); object-fit:contain; filter:drop-shadow(0 12px 9px #6d4a2e12); }
+.coffee-card .coffee-visual:hover img { transform:translateY(-4px) rotate(-1deg); }
+.sv-home .coffee-card .coffee-copy { padding:0; }
+.sv-home .coffee-card .coffee-copy h2 { margin:0 0 18px; font-size:43px; line-height:1.12; letter-spacing:-1.3px; }
+.sv-home .coffee-card .coffee-copy>p { max-width:360px; margin:0 0 22px; font-size:17px; line-height:1.65; }
+.coffee-card .paper-button { min-height:46px; padding:11px 22px; font-size:15px; gap:25px; }
+@media(max-width:900px) {
+  .coffee-pause.coffee-card { gap:26px; padding:26px 30px; }
+  .coffee-card .coffee-visual { height:220px; }
+  .sv-home .coffee-card .coffee-copy h2 { font-size:37px; }
+}
+@media(max-width:600px) {
+  .coffee-pause.coffee-card { width:88%; margin:16px auto 48px; padding:23px 24px 28px; grid-template-columns:1fr; gap:15px; border-radius:24px; }
+  .coffee-card .coffee-visual { height:175px; }
+  .coffee-card .coffee-visual img { max-width:260px; max-height:205px; }
+  .coffee-card .coffee-blob { inset:8px 20% 0; }
+  .sv-home .coffee-card .coffee-copy h2 { font-size:34px; margin-bottom:15px; }
+  .sv-home .coffee-card .coffee-copy>p { font-size:16px; margin-bottom:20px; }
+  .coffee-card .paper-button { font-size:16px; }
+}
+@media(prefers-reduced-motion:reduce) { .coffee-card .coffee-visual:hover img { transform:rotate(-4deg); } }

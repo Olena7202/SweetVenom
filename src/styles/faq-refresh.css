@@ -1,0 +1,17 @@
+/* Simple questions and answers on the page background. */
+.sv-home .paper-faq { display:block; width:88%; max-width:940px; margin:0 auto; padding:54px 0 62px; border:0; border-radius:0; background:none; box-shadow:none; }
+.sv-home .paper-faq h2 { margin:0 0 26px; font-size:clamp(32px,3.2vw,44px); line-height:1.15; letter-spacing:-1.2px; }
+.faq-list { min-width:0; }
+.sv-home .paper-faq details { border:0; border-bottom:1px solid #b28d7740; background:transparent; }
+.sv-home .paper-faq details:first-child { border-top:1px solid #b28d7740; }
+.sv-home .paper-faq summary { padding:21px 0; font-size:18px; line-height:1.5; gap:22px; }
+.sv-home .paper-faq summary>span { display:grid; place-items:center; flex:none; width:28px; height:28px; color:#94655a; font-size:25px; line-height:1; transition:transform .25s; }
+.sv-home .paper-faq summary:focus-visible { outline:2px solid #94665d; outline-offset:4px; border-radius:4px; }
+.sv-home .paper-faq details p { padding:0 45px 23px 0; margin:0; font-size:17px; line-height:1.75; max-width:75ch; }
+@media(max-width:760px) {
+ .sv-home .paper-faq { padding:36px 0 42px; }
+ .sv-home .paper-faq h2 { font-size:32px; margin-bottom:22px; }
+ .sv-home .paper-faq summary { padding:18px 0; font-size:17px; }
+ .sv-home .paper-faq details p { padding:0 0 20px; font-size:16px; }
+}
+@media(prefers-reduced-motion:reduce) { .sv-home .paper-faq summary>span { transition:none; } }

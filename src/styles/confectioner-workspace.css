@@ -1,0 +1,201 @@
+/* A focused, bounded workspace for the confectioner. */
+.confectioner-dashboard { width:calc(100% - 64px); max-width:1320px; margin:0 auto; padding:0 0 48px; }
+.confectioner-dashboard>.navbar { padding:22px 0; min-height:88px; border-bottom:1px solid #b89c8238; margin-bottom:30px; }
+.confectioner-dashboard .dashboard-header { margin:0 0 25px; }
+.confectioner-dashboard .dashboard-header h2 { font-family:Georgia,serif; font-size:38px; line-height:1.2; font-weight:normal; letter-spacing:-1.2px; margin:0 0 9px; }
+.confectioner-dashboard .dashboard-subtitle { font-size:16px; line-height:1.6; margin:0; }
+.confectioner-dashboard .confectioner-cabinet-stack { gap:24px; }
+.confectioner-dashboard .confectioner-stats-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px; padding:0; border:0; background:none; box-shadow:none; }
+.confectioner-dashboard .client-stat-card { display:flex; flex-direction:column; align-items:flex-start; gap:9px; min-width:0; min-height:100px; padding:19px 22px; border:1px solid #ac857d20; border-radius:18px; background:#ecd1c9; box-shadow:none; }
+.confectioner-dashboard .client-stat-card:nth-child(2) { background:#e8ddc8; }
+.confectioner-dashboard .client-stat-card:nth-child(3) { background:#ded5dc; }
+.confectioner-dashboard .client-stat-card:nth-child(4) { background:#e4e3ce; }
+.confectioner-dashboard .client-stat-card span { font-size:14px; color:#75574c; }
+.confectioner-dashboard .client-stat-card strong { font-family:Georgia,serif; font-size:29px; line-height:1.1; font-weight:normal; color:#493126; }
+.confectioner-dashboard .confectioner-studio-layout { display:grid; grid-template-columns:280px minmax(0,1fr); grid-template-areas:"profile orders" "gallery assortment"; gap:22px; align-items:start; }
+.confectioner-dashboard .confectioner-studio-left-stack,.confectioner-dashboard .confectioner-studio-right-stack { display:contents; }
+.confectioner-dashboard .confectioner-about-card { grid-area:profile; }
+.confectioner-dashboard .confectioner-gallery-card { grid-area:gallery; }
+.confectioner-dashboard .confectioner-orders-card { grid-area:orders; }
+.confectioner-dashboard .confectioner-price-card { grid-area:assortment; }
+.confectioner-dashboard :is(.confectioner-about-card,.confectioner-gallery-card,.confectioner-orders-card,.confectioner-price-card) { min-width:0; padding:23px; border:1px solid #b69a8133; border-radius:20px; background:#fff9ef; box-shadow:none; }
+.confectioner-dashboard :is(.confectioner-gallery-card h4,.confectioner-orders-card h3,.confectioner-price-card h3) { font-size:20px; line-height:1.4; letter-spacing:-.4px; margin:0 0 14px; font-weight:600; }
+.confectioner-dashboard .confectioner-about-card .profile-label { font-size:13px; margin:0 0 9px; color:#94655a; }
+.confectioner-dashboard .confectioner-about-card h3 { font-family:Georgia,serif; font-size:25px; line-height:1.2; font-weight:normal; margin:0 0 10px; }
+.confectioner-dashboard .profile-email { font-size:14px; overflow-wrap:anywhere; }
+.confectioner-dashboard .confectioner-about-copy { font-size:14px; line-height:1.7; padding-top:15px; margin-top:15px; border-top:1px solid #b69a8133; }
+.confectioner-dashboard .confectioner-contact-chip { border:0; border-radius:9px; background:#efdfd3; padding:9px 11px; font-size:13px; text-decoration:none; overflow-wrap:anywhere; }
+.confectioner-dashboard .confectioner-section-hint { font-size:14px; line-height:1.5; color:#846c5d; margin:-7px 0 17px; }
+.confectioner-dashboard .confectioner-mini-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.confectioner-dashboard .confectioner-mini-item { padding:9px; border:1px solid #b69a8126; background:#f0e4d6; border-radius:12px; overflow:hidden; }
+.confectioner-dashboard .confectioner-mini-item img { width:100%; height:100px; aspect-ratio:auto; object-fit:contain; }
+.confectioner-dashboard .confectioner-order-filters { gap:7px; margin:0 0 18px; display:flex; flex-wrap:wrap; }
+.confectioner-dashboard .confectioner-filter-btn { padding:8px 13px; min-height:38px; border:1px solid #b89c824a; background:transparent; font-size:14px; line-height:1.4; border-radius:10px; color:#67493c; }
+.confectioner-dashboard .confectioner-filter-btn.is-active { background:#91615b; border-color:#91615b; color:#fff7e9; }
+.confectioner-dashboard .confectioner-order-columns,.confectioner-dashboard .confectioner-order-summary { display:grid; grid-template-columns:minmax(120px,1fr) 88px 105px 85px; gap:12px; }
+.confectioner-dashboard .confectioner-order-columns { padding:0 13px 10px; color:#927a6a; font-size:12px; }
+.confectioner-dashboard .confectioner-order-columns span:last-child { text-align:right; }
+.confectioner-dashboard .confectioner-orders-compact-list { gap:0; }
+.confectioner-dashboard .confectioner-order-summary { padding:14px 13px; min-height:77px; border:0; border-top:1px solid #b69a812c; background:transparent; border-radius:0; box-shadow:none; }
+.confectioner-dashboard .confectioner-order-summary:hover { transform:none; background:#f3e7d9; border-radius:10px; box-shadow:none; }
+.confectioner-dashboard .confectioner-order-summary h4 { font-size:15px; font-weight:500; }
+.confectioner-dashboard .confectioner-order-summary p { font-size:13px; }
+.confectioner-dashboard .confectioner-order-summary strong { font-size:14px; white-space:nowrap; }
+.confectioner-dashboard .order-status-chip { padding:5px 9px; font-size:12px; line-height:1.5; font-weight:500; white-space:nowrap; border-radius:8px; }
+.confectioner-dashboard .confectioner-price-card-head { gap:18px; margin-bottom:18px; align-items:center; }
+.confectioner-dashboard .confectioner-price-card-head h3 { margin-bottom:10px; }
+.confectioner-dashboard .confectioner-price-card-head .confectioner-section-hint { margin:0; }
+.confectioner-dashboard .confectioner-add-cake-btn { flex:none; padding:10px 15px; border:1px solid #91615b; border-radius:10px; background:#91615b; color:#fff7e9; font-size:14px; }
+.confectioner-dashboard .confectioner-price-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.confectioner-dashboard .confectioner-price-item { display:flex; flex-direction:column; min-width:0; border:1px solid #b69a8133; border-radius:14px; background:#f3e6da; color:#493126; transition:transform .25s,border-color .25s; }
+.confectioner-dashboard .confectioner-price-item:nth-child(3n+2) { background:#eee1ce; }
+.confectioner-dashboard .confectioner-price-item:nth-child(3n) { background:#e1d4dd; }
+.confectioner-dashboard .confectioner-price-item:hover { transform:translateY(-3px); border-color:#91615b; }
+.confectioner-dashboard .confectioner-price-item img { width:100%; height:155px; aspect-ratio:auto; object-fit:contain; padding:13px 12px 0; }
+.confectioner-dashboard .confectioner-price-item>div { flex:1; display:flex; flex-direction:column; justify-content:space-between; gap:10px; padding:13px 15px 16px; }
+.confectioner-dashboard .confectioner-price-item strong { font-size:15px; line-height:1.4; font-weight:500; }
+.confectioner-dashboard .confectioner-price-item span { font-size:16px; font-weight:600; color:#8c5a50; }
+@media(max-width:1150px) {
+ .confectioner-dashboard .confectioner-studio-layout { grid-template-columns:240px minmax(0,1fr); gap:18px; }
+ .confectioner-dashboard :is(.confectioner-about-card,.confectioner-gallery-card,.confectioner-orders-card,.confectioner-price-card) { padding:20px; }
+ .confectioner-dashboard .confectioner-price-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .confectioner-dashboard .confectioner-order-columns,.confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(100px,1fr) 95px 78px; gap:10px; }
+ .confectioner-dashboard .confectioner-order-summary>p,.confectioner-dashboard .confectioner-order-columns>span:nth-child(2) { display:none; }
+}
+@media(max-width:850px) {
+ .confectioner-dashboard { width:calc(100% - 36px); }
+ .confectioner-dashboard .confectioner-studio-layout { grid-template-columns:1fr; grid-template-areas:"profile" "orders" "assortment" "gallery"; }
+ .confectioner-dashboard .confectioner-about-copy { display:none; }
+ .confectioner-dashboard .confectioner-mini-gallery { grid-template-columns:repeat(4,minmax(0,1fr)); }
+ .confectioner-dashboard .confectioner-mini-item img { height:120px; }
+}
+@media(max-width:540px) {
+ .confectioner-dashboard>.navbar { margin-bottom:25px; min-height:78px; }
+ .confectioner-dashboard .dashboard-header h2 { font-size:31px; }
+ .confectioner-dashboard .dashboard-subtitle { font-size:15px; }
+ .confectioner-dashboard .confectioner-stats-strip { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+ .confectioner-dashboard .client-stat-card { padding:16px; min-height:94px; }
+ .confectioner-dashboard .client-stat-card strong { font-size:26px; }
+ .confectioner-dashboard .confectioner-order-columns { display:none; }
+ .confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(0,1fr) auto; gap:8px 12px; padding:16px 4px; }
+ .confectioner-dashboard .confectioner-order-summary>div { grid-row:span 2; }
+ .confectioner-dashboard .confectioner-order-summary .order-status-chip,.confectioner-dashboard .confectioner-order-summary strong { justify-self:end; }
+ .confectioner-dashboard .confectioner-price-card-head { align-items:flex-start; flex-direction:column; }
+ .confectioner-dashboard .confectioner-price-item img { height:130px; padding:8px; }
+ .confectioner-dashboard .confectioner-price-item>div { padding:10px; }
+ .confectioner-dashboard .confectioner-price-item strong { font-size:14px; }
+ .confectioner-dashboard .confectioner-mini-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(prefers-reduced-motion:reduce) { .confectioner-dashboard .confectioner-price-item { transition:none; transform:none; } }
+/* Streamlined studio: identity, overview, orders and assortment. */
+.confectioner-dashboard { max-width:1240px; }
+.confectioner-dashboard .confectioner-about-card { display:flex; align-items:center; gap:17px; padding:18px 22px; border-radius:16px; background:#fff9efb3; }
+.studio-avatar { display:grid; place-items:center; flex:none; width:54px; height:54px; border-radius:50%; background:#e6c8c1; color:#84574c; font-family:Georgia,serif; font-size:22px; }
+.studio-identity { min-width:0; }
+.confectioner-dashboard .confectioner-about-card .profile-label { font-size:12px; margin:0 0 3px; }
+.confectioner-dashboard .confectioner-about-card h3 { font-family:"Segoe UI",Arial,sans-serif; font-size:19px; line-height:1.3; font-weight:600; margin:0 0 3px; letter-spacing:-.3px; }
+.confectioner-dashboard .confectioner-about-card .profile-email { margin:0; font-size:14px; color:#8b7263; }
+.confectioner-dashboard .confectioner-contact-list { display:flex; flex-wrap:wrap; gap:9px; margin:0 0 0 auto; }
+.confectioner-dashboard .confectioner-contact-chip { padding:9px 13px; font-size:14px; border:1px solid #b69a8130; border-radius:10px; background:transparent; }
+.confectioner-dashboard .confectioner-cabinet-stack { gap:22px; }
+.confectioner-dashboard .confectioner-studio-layout { display:flex; flex-direction:column; gap:24px; }
+.confectioner-dashboard .confectioner-studio-right-stack { display:contents; }
+.confectioner-dashboard .confectioner-orders-card,.confectioner-dashboard .confectioner-price-card { width:100%; padding:26px; border-radius:18px; }
+.confectioner-dashboard .confectioner-order-columns,.confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(170px,1fr) 130px 130px 110px; gap:20px; }
+.confectioner-dashboard .confectioner-order-columns { font-size:13px; padding:0 15px 12px; }
+.confectioner-dashboard .confectioner-order-summary { padding:16px 15px; min-height:76px; }
+.confectioner-dashboard .confectioner-order-summary>p,.confectioner-dashboard .confectioner-order-columns>span:nth-child(2) { display:block; }
+.confectioner-dashboard .confectioner-order-summary h4 { font-size:16px; }
+.confectioner-dashboard .confectioner-order-summary strong { font-size:15px; }
+.confectioner-dashboard .confectioner-price-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+.confectioner-dashboard .confectioner-price-item { border-radius:15px; }
+.confectioner-dashboard .confectioner-price-item img { height:180px; padding:15px 14px 2px; }
+.confectioner-dashboard .confectioner-price-item>div { gap:11px; padding:14px 17px 17px; }
+.confectioner-dashboard .confectioner-price-item strong { font-size:16px; }
+.confectioner-dashboard .confectioner-price-item span { font-family:Georgia,serif; font-weight:normal; font-size:21px; }
+@media(max-width:1000px) { .confectioner-dashboard .confectioner-price-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:700px) {
+ .confectioner-dashboard .confectioner-about-card { flex-wrap:wrap; padding:17px; gap:13px; }
+ .confectioner-dashboard .confectioner-contact-list { width:100%; margin:2px 0 0; padding-top:13px; border-top:1px solid #b69a8133; }
+ .confectioner-dashboard .confectioner-orders-card,.confectioner-dashboard .confectioner-price-card { padding:20px 17px; }
+ .confectioner-dashboard .confectioner-order-columns,.confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(110px,1fr) 100px 85px; gap:10px; }
+ .confectioner-dashboard .confectioner-order-summary>p,.confectioner-dashboard .confectioner-order-columns>span:nth-child(2) { display:none; }
+ .confectioner-dashboard .confectioner-price-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+ .confectioner-dashboard .confectioner-price-item img { height:150px; padding:10px; }
+ .confectioner-dashboard .confectioner-price-item>div { padding:12px; }
+ .confectioner-dashboard .confectioner-price-item strong { font-size:15px; }
+}
+@media(max-width:480px) {
+ .confectioner-dashboard .confectioner-order-columns { display:none; }
+ .confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(0,1fr) auto; gap:7px 12px; padding:16px 3px; }
+ .confectioner-dashboard .confectioner-order-summary>div { grid-row:span 2; }
+ .confectioner-dashboard .confectioner-order-summary h4 { font-size:15px; }
+ .confectioner-dashboard .confectioner-price-item img { height:125px; }
+ .confectioner-dashboard .confectioner-price-item>div { padding:11px; }
+}
+.confectioner-dashboard .confectioner-cabinet-stack { grid-template-columns:minmax(0,1fr); }
+.confectioner-dashboard .confectioner-about-card { grid-area:auto; }
+/* Full cake previews, with a separate, readable details column. */
+.studio-cake-overlay { padding:24px; background:#35271fc9; backdrop-filter:blur(6px); }
+.modal-content.confectioner-cake-modal { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:0; width:min(960px,100%); max-width:960px; height:min(720px,88dvh); max-height:88dvh; overflow:hidden; padding:0; border:1px solid #f6ead8; border-radius:22px; background:#fff8ec; }
+.modal-content.confectioner-cake-modal .confectioner-cake-photo-frame { display:flex; align-items:center; justify-content:center; width:100%; height:100%; min-height:0; max-height:none; aspect-ratio:auto; padding:25px; margin:0; border:0; border-radius:0; background:#ebdecb; overflow:hidden; }
+.modal-content.confectioner-cake-modal .confectioner-cake-photo-frame-img { display:block; width:100%; height:100%; max-width:100%; max-height:100%; object-fit:contain; object-position:center; border-radius:12px; }
+.studio-cake-details { min-width:0; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#b89680 #fff8ec; padding:48px 30px 28px; }
+.modal-content.confectioner-cake-modal .close-btn { position:absolute; z-index:5; top:12px; right:14px; width:38px; height:38px; border-radius:50%; border:1px solid #b69a8155; background:#fff8ec; font-size:25px; line-height:1; }
+.modal-content.confectioner-cake-modal .confectioner-cake-view>h2,.modal-content.confectioner-cake-modal .confectioner-cake-modal-title { font-family:Georgia,serif; font-size:30px; line-height:1.15; font-weight:normal; margin:0 0 15px; letter-spacing:-.6px; }
+.modal-content.confectioner-cake-modal .confectioner-cake-view-desc { font-size:16px; line-height:1.7; }
+.modal-content.confectioner-cake-modal .confectioner-cake-modal-actions { position:static; margin-top:24px; padding-top:18px; background:transparent; }
+.modal-content.confectioner-cake-modal .confectioner-cake-modal-actions button { border-radius:10px; box-shadow:none; }
+.modal-content.confectioner-cake-modal .confectioner-delete-btn { background:#f3e1d9 !important; color:#984c42; box-shadow:none !important; }
+.confectioner-dashboard .confectioner-order-modal-media { display:flex; align-items:center; justify-content:center; padding:25px; background:#ebdecb; }
+.confectioner-dashboard .confectioner-order-modal-media img { width:100%; height:100%; max-height:100%; object-fit:contain; object-position:center; border-radius:12px; }
+@media(max-width:700px) {
+ .studio-cake-overlay { padding:12px; }
+ .modal-content.confectioner-cake-modal { display:block; width:min(520px,100%); height:auto; max-height:92dvh; overflow-y:auto; border-radius:18px; }
+ .modal-content.confectioner-cake-modal .confectioner-cake-photo-frame { height:280px; max-height:40dvh; padding:22px; }
+ .studio-cake-details { overflow:visible; padding:25px 22px; }
+ .modal-content.confectioner-cake-modal .confectioner-cake-view>h2,.modal-content.confectioner-cake-modal .confectioner-cake-modal-title { font-size:28px; }
+ .confectioner-dashboard .confectioner-order-modal-media { height:260px; padding:20px; }
+}
+/* Workspace navigation and the daily delivery queue. */
+.confectioner-dashboard [role="tabpanel"][hidden] { display:none !important; }
+.studio-tabs { display:flex; align-items:center; gap:6px; border-bottom:1px solid #b69a8140; padding-bottom:0; }
+.studio-tabs>button { display:flex; align-items:center; gap:10px; padding:14px 20px 16px; margin-bottom:-1px; border:0; border-bottom:2px solid transparent; border-radius:12px 12px 0 0; background:transparent; color:#8b7161; font-size:17px; font-weight:500; cursor:pointer; }
+.studio-tabs>button[aria-selected="true"] { color:#714b40; border-bottom-color:#91615b; background:#fff8ec80; }
+.studio-tabs>button:hover { background:#ecddd080; }
+.studio-tabs>button>span { padding:2px 8px; border-radius:7px; background:#e9dacd; font-size:12px; line-height:1.5; }
+.studio-orders-panel { display:grid; gap:22px; width:100%; min-width:0; }
+.studio-today { padding:22px 25px; border:1px solid #b69a8133; border-radius:18px; background:linear-gradient(110deg,#ead9cc85,#fff8ec); }
+.studio-today-head { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.studio-today h3 { font-family:Georgia,serif; font-size:26px; line-height:1.2; font-weight:normal; letter-spacing:-.6px; margin:0 0 7px; }
+.studio-today h3>span { display:inline-block; margin-left:12px; font-family:"Segoe UI",Arial,sans-serif; font-size:14px; font-weight:400; letter-spacing:0; color:#977362; }
+.studio-today-head p { margin:0; font-size:15px; line-height:1.6; color:#8b7161; }
+.studio-today-count { flex:none; padding:9px 13px; border:1px solid #b69a8138; border-radius:10px; font-size:14px; color:#785348; background:#fff8eca3; }
+.studio-today-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; margin-top:20px; }
+.studio-today-order { display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:18px; text-align:left; background:#fffaf1; border:1px solid #b69a8145; border-radius:12px; color:#67493c; cursor:pointer; transition:border-color .2s; }
+.studio-today-order:hover { border-color:#91615b; }
+.studio-today-number { font-size:12px; color:#997b68; }
+.studio-today-order strong { font-size:16px; font-weight:600; }
+.studio-today-order>span:not(.order-status-chip):not(.studio-today-number) { font-size:14px; color:#8b7161; }
+.confectioner-dashboard .studio-due-date { display:flex !important; flex-direction:column; gap:3px; align-items:flex-start; }
+.studio-due-date small { font-size:11px; line-height:1.4; }
+.studio-due-date.is-today { color:#795b31; font-weight:600; }
+.studio-due-date.is-overdue { color:#a05246; }
+@media(max-width:700px) {
+ .studio-tabs>button { font-size:16px; padding:12px 14px 14px; gap:8px; }
+ .studio-today { padding:20px 18px; }
+ .studio-today-head { align-items:flex-start; flex-direction:column; gap:13px; }
+ .studio-today-grid { grid-template-columns:1fr; }
+ .studio-today h3 { font-size:25px; }
+ .confectioner-dashboard .confectioner-order-columns { display:none; }
+ .confectioner-dashboard .confectioner-order-summary { grid-template-columns:minmax(0,1fr) auto; gap:8px 13px; }
+ .confectioner-dashboard .confectioner-order-summary>div { grid-row:span 2; }
+ .confectioner-dashboard .confectioner-order-summary .studio-due-date { grid-column:1; grid-row:3; font-size:13px; }
+ .confectioner-dashboard .confectioner-order-summary .order-status-chip { grid-column:2; grid-row:1; justify-self:end; }
+ .confectioner-dashboard .confectioner-order-summary strong { grid-column:2; grid-row:2; justify-self:end; }
+}
+@media(prefers-reduced-motion:reduce) { .studio-today-order { transition:none; } }
+.studio-orders-panel { grid-template-columns:minmax(0,1fr); }
+.confectioner-dashboard .studio-orders-panel>.confectioner-orders-card { grid-area:auto; }
+.studio-due-label { display:none; }
+@media(max-width:700px) { .studio-due-label { display:inline; } }

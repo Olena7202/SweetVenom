@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+**/bin/
+**/obj/
+
+# Local configuration and editor files
+.env*
+!.env.example
+*.local
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.log
+.DS_Store
+**/appsettings.Development.json
+**/appsettings.Local.json
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal

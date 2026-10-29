@@ -1,0 +1,110 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #503631;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 28%),
+    linear-gradient(180deg, #e7beb2 0%, #f6e6df 48%, #fffaf6 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --shell: rgba(255, 250, 246, 0.74);
+  --rose: #dca59c;
+  --rose-deep: #be7f77;
+  --cream: #fffaf6;
+  --ink: #5a3a33;
+  --muted: #8d6963;
+  --line: rgba(119, 75, 66, 0.12);
+  --shadow: 0 22px 70px rgba(122, 77, 66, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 28%),
+    linear-gradient(180deg, #e7beb2 0%, #f6e6df 48%, #fffaf6 100%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  width: min(1240px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.home-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 40px;
+  background:
+    linear-gradient(135deg, rgba(236, 212, 205, 0.95), rgba(252, 246, 242, 0.92)),
+    var(--shell);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.home-shell::before,
+.home-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.home-shell::before {
+  top: -120px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0));
+}
+
+.home-shell::after {
+  bottom: 120px;
+  left: -120px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(223, 183, 174, 0.25), rgba(223, 183, 174, 0));
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100% - 16px, 100%);
+    margin: 8px auto 16px;
+  }
+
+  .home-shell {
+    border-radius: 28px;
+  }
+}

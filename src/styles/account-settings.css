@@ -1,0 +1,48 @@
+.account-settings-shell { width:calc(100% - 64px); max-width:1160px; margin:0 auto; padding-bottom:48px; }
+.account-settings-shell>.navbar { padding:22px 0; min-height:88px; border-bottom:1px solid #b69a8138; margin-bottom:26px; }
+.account-settings-main { max-width:980px; margin:0 auto; }
+.account-settings-back { display:inline-flex; align-items:center; gap:9px; color:#8b6b5a; font-size:14px; text-decoration:none; margin-bottom:24px; }
+.account-settings-back:hover { color:#624333; }
+.account-settings-back .direction-icon { width:18px; height:18px; }
+.account-settings-heading { margin-bottom:30px; }
+.account-settings-heading h1 { font-family:Georgia,serif; font-size:clamp(31px,3.4vw,43px); line-height:1.15; font-weight:normal; letter-spacing:-1.2px; margin:0 0 12px; color:#493126; }
+.account-settings-heading em { color:#95665e; font-weight:normal; }
+.account-settings-heading p { color:#8b7161; font-size:16px; line-height:1.6; margin:0; }
+.account-settings-grid { display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:24px; align-items:start; }
+.account-settings-form { padding:29px; border:1px solid #b69a8133; border-radius:20px; background:#fff9ef; min-width:0; }
+.account-settings-form h2 { font-size:20px; font-weight:600; line-height:1.4; letter-spacing:-.4px; margin:0 0 23px; }
+.account-settings-field { margin-bottom:20px; }
+.account-settings-field label { display:flex; align-items:baseline; flex-wrap:wrap; gap:10px; margin-bottom:8px; font-size:15px; font-weight:500; color:#67493c; }
+.account-settings-field label>span { font-size:12px; font-weight:400; color:#a38a77; }
+.account-settings-field input { display:block; width:100%; padding:13px 15px; min-height:48px; border:1px solid #cbb6a1; border-radius:10px; background:#fffdf7; color:#493126; font:inherit; font-size:16px; box-shadow:none; }
+.account-settings-field input:focus { outline:2px solid #a67a6960; outline-offset:2px; border-color:#a67a69; }
+.account-settings-field input::placeholder { color:#b19a88; }
+.account-settings-field>p { font-size:13px; line-height:1.5; color:#987d69; margin:8px 0 0; }
+.account-settings-storage { font-size:13px; color:#987d69; line-height:1.6; margin:2px 0 22px; }
+.account-settings-actions { display:flex; flex-wrap:wrap; gap:12px; padding-top:21px; border-top:1px solid #b69a8133; }
+.account-settings-actions button { min-height:46px; padding:12px 19px; border-radius:10px; border:1px solid #91615b; background:#91615b; color:#fff7e9; font-family:inherit; font-size:15px; line-height:1.4; font-weight:500; cursor:pointer; box-shadow:none; }
+.account-settings-actions button+button { background:transparent; border-color:#b69a8160; color:#8b6b5a; }
+.account-settings-actions button:disabled { opacity:.45; cursor:default; }
+.account-settings-actions button:not(:disabled):hover { filter:brightness(.96); }
+.account-settings-summary { min-width:0; padding:27px 22px 22px; border:1px solid #b69a8133; border-radius:20px; background:linear-gradient(140deg,#ead3cb,#f1e5d6); }
+.account-settings-avatar { display:grid; place-items:center; width:66px; height:66px; border-radius:50%; border:1px solid #fff8ebbb; background:#fff8eb90; font-family:Georgia,serif; font-size:26px; color:#946456; margin-bottom:18px; }
+.account-settings-summary h2 { font-family:Georgia,serif; font-size:25px; font-weight:normal; line-height:1.2; letter-spacing:-.5px; overflow-wrap:anywhere; margin:0 0 7px; color:#67493c; }
+.account-settings-summary>p { font-size:14px; color:#987462; margin:0 0 23px; }
+.account-settings-email { padding-top:20px; border-top:1px solid #ad867142; }
+.account-settings-email label { font-size:12px; color:#8b6b5a; }
+.account-settings-email input { display:block; width:100%; min-width:0; padding:8px 0; border:0; background:transparent; color:#67493c; font-family:inherit; font-size:14px; box-shadow:none; border-radius:0; }
+.account-settings-email p { font-size:12px; line-height:1.6; color:#987d69; margin:2px 0 0; }
+.account-settings-success,.account-settings-error { padding:11px 14px; border-radius:9px; font-size:14px; line-height:1.5; margin:0 0 18px; }
+.account-settings-success { color:#60714e; background:#e4e8d9; }
+.account-settings-error { color:#984e42; background:#f3e0d8; }
+@media(max-width:760px) {
+ .account-settings-shell { width:calc(100% - 36px); }
+ .account-settings-grid { grid-template-columns:1fr; gap:20px; }
+ .account-settings-summary { padding:23px; }
+ .account-settings-form { padding:24px; }
+ .account-settings-heading { margin-bottom:24px; }
+ .account-settings-heading h1 { font-size:34px; }
+}
+@media(max-width:400px) { .account-settings-actions button { width:100%; } }
+.account-settings-email>span { font-size:12px; color:#8b6b5a; }
+.account-settings-email .account-email-value { font-size:14px; color:#67493c; padding:8px 0; margin:0; overflow-wrap:anywhere; }

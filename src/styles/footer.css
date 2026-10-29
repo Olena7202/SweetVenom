@@ -1,0 +1,187 @@
+.site-footer {
+  position: relative;
+  z-index: 1;
+  width: calc(100% + 2px);
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -36px;
+  padding: 36px 32px 28px;
+  border-radius: 0 0 40px 40px;
+  border-top: none;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 230, 222, 0.35) 0%,
+    rgba(252, 236, 228, 0.88) 22%,
+    rgba(248, 228, 218, 0.96) 55%,
+    rgba(232, 200, 188, 0.42) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.site-footer-inner {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2px;
+}
+
+.site-footer-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  width: 100%;
+  min-height: 2.5rem;
+}
+
+.site-footer-brand {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+  text-align: left;
+  min-width: 0;
+}
+
+.site-footer-logo {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(2rem, 4.5vw, 2.5rem);
+  line-height: 1;
+  color: rgba(72, 48, 42, 0.92);
+  text-shadow: 0 2px 14px rgba(255, 255, 255, 0.5);
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: auto;
+  flex: 0 1 auto;
+}
+
+.site-footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(56, 38, 32, 0.82);
+  background: rgba(88, 58, 50, 0.05);
+  border: 1px solid rgba(112, 78, 68, 0.12);
+  box-shadow: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease;
+}
+
+.site-footer-nav a:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(112, 78, 68, 0.18);
+  color: rgba(42, 28, 24, 0.92);
+}
+
+.site-footer-nav a:focus-visible {
+  outline: 2px solid rgba(140, 95, 85, 0.45);
+  outline-offset: 2px;
+}
+
+.site-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 2px;
+  border-top: 1px solid rgba(168, 120, 108, 0.1);
+}
+
+.site-footer-mark {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(86, 64, 58, 0.62);
+  line-height: 1.4;
+  max-width: min(100%, 22rem);
+}
+
+.site-footer-copy {
+  margin: 0;
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(86, 64, 58, 0.58);
+}
+
+.page > .site-footer {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 28px;
+  padding: 28px 20px 24px;
+  border-radius: 28px;
+  border: 1px solid rgba(160, 110, 100, 0.12);
+  background: linear-gradient(
+    180deg,
+    rgba(252, 238, 232, 0.45) 0%,
+    rgba(255, 253, 251, 0.96) 28%,
+    rgba(248, 228, 218, 0.55) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 640px) {
+  .site-footer-top-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-footer-brand {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .site-footer-nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-footer-copy {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-footer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -28px;
+    padding: 32px 18px 24px;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .site-footer-inner {
+    gap: 8px;
+    padding: 0;
+  }
+}

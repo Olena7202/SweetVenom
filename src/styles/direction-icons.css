@@ -1,0 +1,8 @@
+/* Shared directional icons across links and calls to action. */
+.direction-icon { display:inline-block; vertical-align:middle; flex:none; width:21px; height:21px; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.direction-icon-up-right { rotate:-45deg; }
+.direction-icon-left { rotate:180deg; }
+.paper-button>.direction-icon { width:32px; height:32px; padding:7px; border:1px solid currentColor; border-color:color-mix(in srgb,currentColor 24%,transparent); border-radius:50%; transition:translate .25s,background .25s; }
+.paper-button:hover>.direction-icon { translate:3px 0; background:#fff1; }
+.paper-button-cream:hover>.direction-icon { background:#8d625010; }
+@media(prefers-reduced-motion:reduce) { .paper-button>.direction-icon { transition:none; } .paper-button:hover>.direction-icon { translate:none; } }
