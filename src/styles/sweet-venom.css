@@ -45,7 +45,7 @@ html { scroll-padding-top:30px; }
 .bakery-hero .paper-kicker { color:#fff3dfd9; font-size:8px; letter-spacing:2px; }
 .bakery-hero h1 { font-family:Georgia,"Times New Roman",serif; font-weight:normal; font-size:clamp(48px,5.6vw,86px); line-height:1.08; letter-spacing:-2.6px; margin:28px 0 22px; }
 .bakery-hero h1 em { color:#f5d4bb; }
-.bakery-hero h1 .hero-title-occasion { display:block; margin-top:18px; font-size:clamp(24px,2.3vw,34px); line-height:1.25; letter-spacing:-.5px; }
+.bakery-hero h1 .hero-title-occasion { display:block; font:inherit; color:inherit; letter-spacing:inherit; }
 .bakery-hero-copy>p { font-size:13px; line-height:1.85; color:#fff6e5e6; margin-bottom:29px; }
 .hero-handwritten { display:block; width:max-content; font-size:14px; color:#f9e0c8; margin:27px 0 0 30px; transform:rotate(-5deg); }
 .bakery-hero-visual { position:relative; align-self:stretch; min-height:440px; z-index:2; }
