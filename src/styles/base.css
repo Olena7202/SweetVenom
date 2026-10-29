@@ -108,3 +108,5 @@ button {
     border-radius: 28px;
   }
 }
+
+.demo-notice { padding:9px 16px; background:#fff8eb; color:#674331; text-align:center; font-size:13px; line-height:1.5; }

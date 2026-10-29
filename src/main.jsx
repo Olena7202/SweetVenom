@@ -7,7 +7,8 @@ import "./styles/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      {import.meta.env.MODE === "demo" && <div className="demo-notice" role="status">Демонстраційна версія. Вхід і надсилання замовлень недоступні.</div>}
       <ScrollToRoute /><App />
     </BrowserRouter>
   </React.StrictMode>

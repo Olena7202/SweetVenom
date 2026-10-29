@@ -1,3 +1,4 @@
+import { demoAdapter } from "../data/demoCatalog";
 import axios from "axios";
 
 const baseURL = import.meta.env.DEV
@@ -5,6 +6,7 @@ const baseURL = import.meta.env.DEV
   : (import.meta.env.VITE_API_URL || "http://localhost:5023/api").replace(/\/$/, "");
 
 const api = axios.create({
+  ...(import.meta.env.MODE === "demo" ? { adapter: demoAdapter } : {}),
   baseURL,
   headers: {
     "Cache-Control": "no-cache",

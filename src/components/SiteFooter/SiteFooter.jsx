@@ -15,7 +15,7 @@ export default function SiteFooter() {
           </div>
 
           <nav className="site-footer-nav" aria-label="Навігація в підвалі сайту">
-            <a href="/#catalog">Вітрина</a>
+            <Link to="/#catalog">Вітрина</Link>
             <Link to="/order">Замовити</Link>
             <Link to={user ? cabinetPath : "/auth"}>{user ? "Кабінет" : "Увійти"}</Link>
           </nav>
